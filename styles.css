@@ -1,0 +1,334 @@
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/wallpaperflare.com_wallpaper.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero a {
+    color: #fff;
+    background: #5cb85c;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero a:hover {
+    background: #4cae4c;
+}
+
+/* Image Slider */
+
+.image-slider {
+    padding: 2rem;
+    background: #fff;
+    overflow: hidden; 
+}
+
+.slides {
+    display: flex;
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    gap: 1rem;
+    scroll-snap-type: x mandatory; 
+    height: 100%; 
+}
+
+.slide {
+    flex: none;
+    width: 300px; 
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1rem;
+    scroll-snap-align: start; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.slide:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.slide p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+
+
+
+/* Optional: Add arrow controls */
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.control-button {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.control-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+/* Content Sections */
+section {
+    padding: 2rem;
+    background: #fff;
+    margin: 1rem 0;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+section:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-5px);
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+#about {
+    padding: 40px 20px;
+    background: #f4f4f4; 
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.about-container img {
+    max-width: 50%;
+    height: auto;
+    max-height: 400px; 
+    object-fit: cover; 
+}
+
+.about-text {
+    flex: 1; 
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    transition: color 0.3s;
+}
+
+.about-text p:hover {
+    color: #5cb85c;
+}
+
+/* Grid Layout */
+.plant-grid, .benefits-content, .testimonials-grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.plant-item, .benefit-item, .testimonial-item {
+    flex: 1;
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plant-item:hover, .benefit-item:hover, .testimonial-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.plant-item img, .testimonial-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.benefits-content .benefit-item {
+    flex: 1;
+    max-width: 30%;
+}
+
+/* Interactive Experience Section */
+#experience {
+    background: #fff;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#experience:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-5px);
+}
+
+#experience img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+#experience img:hover {
+    transform: scale(1.1);
+}
+
+/* Call-to-Action Section */
+.harmony-section {
+    background: #2e4631; 
+    color: #f5f5f5; 
+    text-align: center;
+    padding: 60px 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.harmony-section:hover {
+    background-color: #3b5e43;
+    transform: scale(1.02);
+}
+
+.harmony-section .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #a9c5a2; 
+}
+
+.harmony-section .section-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #c2d6c0; 
+}
+
+.harmony-section .harmony-description {
+    font-size: 1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #f5f5f5; 
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 2rem;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
